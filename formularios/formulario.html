@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de pesquisa</title>
+</head>
+<body>
+    <form action="cadastro.php" method="get">
+        <div class="form-group"> <!--Nome do usuário-->
+            <label for="inome">Nome</label> 
+            <input type="text" name="nome" id="inome" placeholder="Entre com seu nome" required class="input-group">
+        </div>
+
+        <div class="form-group"> <!--E-mail do usuário-->
+            <label for="iemail">E-mail</label>
+            <input type="text" name="emai" id="iemail" placeholder="Degite o seu e-mail" required class="input-group">
+        </div>
+
+        <div class="form-group"> <!--Idade do usuário-->
+            <label for="iidade">Idade (opicional)</label>
+            <input type="number" name="idade" id="iidade" placeholder="idade" class="input-group" min="10" max="99">
+        </div>
+
+        <div class="form-group"> <!--Função do usuário-->
+            <label for="ifunc">Qual opção melhor descreve sua função atual?</label>
+            <select name="func" id="ifunc" class="input-group">
+                <option selected>Selecione a função atual</option>
+                <option value="estudante">Estudante</option>
+                <option value="trabalho">Trabalho em tempo integral</option>
+                <option value="aluno-integral">Aluno em tempo integral</option>
+                <option value="nao-dizer">Prefiro não dizer</option>
+                <option value="outro">Outro</option>
+            </select>
+        </div>
+
+        <div class="form-group"> <!--Recomendação do usuário-->
+            <p>Você recomendaria o freeCodeCamp a um amigo?</p>
+            <label>
+                <input type="radio" name="recomendacao" value="definitivamente"checked class="radio">
+                Definitivamente
+            </label>
+
+            <label>
+                <input type="radio" name="recomendacao"  value="talvez"class="radio" > Talvez
+            </label>
+
+            <label>
+                <input type="radio" name="recomendacao" value="nao-certeza"> Não tenho certeza
+            </label>
+        </div>
+
+    </form>
+</body>
+</html>
