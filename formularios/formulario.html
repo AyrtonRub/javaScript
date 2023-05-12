@@ -5,52 +5,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de pesquisa</title>
+
+    <link rel="stylesheet" href="estilo/style.css">
 </head>
 <body>
-    <form action="cadastro.php" method="get">
-        <div class="form-group"> <!--Nome do usuário-->
-            <label for="inome">Nome</label> 
-            <input type="text" name="nome" id="inome" placeholder="Entre com seu nome" required class="input-group">
-        </div>
-
-        <div class="form-group"> <!--E-mail do usuário-->
-            <label for="iemail">E-mail</label>
-            <input type="text" name="emai" id="iemail" placeholder="Degite o seu e-mail" required class="input-group">
-        </div>
-
-        <div class="form-group"> <!--Idade do usuário-->
-            <label for="iidade">Idade (opicional)</label>
-            <input type="number" name="idade" id="iidade" placeholder="idade" class="input-group" min="10" max="99">
-        </div>
-
-        <div class="form-group"> <!--Função do usuário-->
-            <label for="ifunc">Qual opção melhor descreve sua função atual?</label>
-            <select name="func" id="ifunc" class="input-group">
-                <option selected>Selecione a função atual</option>
-                <option value="estudante">Estudante</option>
-                <option value="trabalho">Trabalho em tempo integral</option>
-                <option value="aluno-integral">Aluno em tempo integral</option>
-                <option value="nao-dizer">Prefiro não dizer</option>
-                <option value="outro">Outro</option>
-            </select>
-        </div>
-
-        <div class="form-group"> <!--Recomendação do usuário-->
-            <p>Você recomendaria o freeCodeCamp a um amigo?</p>
-            <label>
-                <input type="radio" name="recomendacao" value="definitivamente"checked class="radio">
-                Definitivamente
-            </label>
-
-            <label>
-                <input type="radio" name="recomendacao"  value="talvez"class="radio" > Talvez
-            </label>
-
-            <label>
-                <input type="radio" name="recomendacao" value="nao-certeza"> Não tenho certeza
-            </label>
-        </div>
-
-    </form>
+    <main>
+        <form action="cadastro.php" method="get">
+            <div class="form-group"> <!--Nome do usuário-->
+                <label for="inome">Nome</label>
+                <input type="text" name="nome" id="inome" placeholder="Entre com seu nome" required class="input-group">
+            </div>
+            <div class="form-group"> <!--E-mail do usuário-->
+                <label for="iemail">E-mail</label>
+                <input type="text" name="email" id="iemail" placeholder="Degite o seu e-mail" required class="input-group">
+            </div>
+            <div class="form-group"> <!--Idade do usuário-->
+                <label for="iidade">Idade (opicional)</label>
+                <input type="number" name="idade" id="iidade" placeholder="idade" class="input-group" min="10" max="99">
+            </div>
+            <div class="form-group"> <!--Função do usuário-->
+                <label for="ifunc">Qual opção melhor descreve sua função atual?</label>
+                <select name="func" id="ifunc" class="input-group">
+                    <option selected>Selecione a função atual</option>
+                    <option value="estudante">Estudante</option>
+                    <option value="trabalho">Trabalho em tempo integral</option>
+                    <option value="aluno-integral">Aluno em tempo integral</option>
+                    <option value="nao-dizer">Prefiro não dizer</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </div>
+            <div class="form-group"> <!--Recomendação do usuário-->
+                <p>Você recomendaria o freeCodeCamp a um amigo?</p>
+                <label>
+                    <input type="radio" name="recomendacao" value="definitivamente"checked class="radio">
+                    Definitivamente
+                </label>
+                <label>
+                    <input type="radio" name="recomendacao"  value="talvez"class="radio" > Talvez
+                </label>
+                <label>
+                    <input type="radio" name="recomendacao" value="nao-certeza"> Não tenho certeza
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="irecurso">
+                    Qual é o seu recurso favorito do freeCodeCamp?
+                </label>
+                <select name="recurso" id="irecurso" class="input-group">
+                <option selected>Selecione a opção</option>
+                <option value="desafios">Desafios</option>
+                <option value="projetos">Projetos</option>
+                <option value="comunidades">Comunidade</option>
+                <option value="open-source">Código aberto</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>
+                    O que você gostaria de ver melhorado? (Marque todos os que se aplicam)
+                </p>
+                <input type="checkbox" name="front" id="ifront" class="input-group">
+                <label for="ifront">Front-End projetos</label>
+                <input type="checkbox" name="back" id="iback" class="input-group">
+                <label for="iback">Back-End projetos</label>
+                <input type="checkbox" name="dado" id="idado" class="input-group">
+                <label for="idado">Visualização de dados</label>
+                <input type="checkbox" name="desafio" id="idesafio" class="input-group">
+                <label for="idesafio">Desafios</label>
+                <input type="checkbox" name="comunidade" id="icomunidade" class="input-group">
+                <label for="icomunidade">Comunidade de código aberto</label>
+                <input type="checkbox" name="gitter" id="igitter" class="input-group">
+                <label for="igitter">Salas de ajuda do Gitter</label>
+                <input type="checkbox" name="videos" id="ivideos" class="input-group">
+                <label for="ivideos">Videos</label>
+                <input type="checkbox" name="city" id="icity" class="input-group">
+                <label for="icity">Encontros da cidade</label>
+                <input type="checkbox" name="wiki" id="iwiki" class="input-group">
+                <label for="iwiki">Wiki</label>
+                <input type="checkbox" name="forum" id="iforum" class="input-group">
+                <label for="iforum">Fórum</label>
+                <input type="checkbox" name="curso" id="icurso" class="input-group">
+                <label for="icurso">Cursos adicionais</label>
+            </div>
+            <div class="form-group">
+                <p>
+                    Algum comentário ou sugestão?
+                </p>
+                <textarea name="comentario" id="icomentario" cols="30" rows="10" class="text" placeholder="Entre com o seu texto aqui..." ></textarea>
+            </div>
+            <div>
+                <input type="submit" id="submit" class="subimit-buttom">
+            </div>
+        </form>
+    </main>
 </body>
 </html>
